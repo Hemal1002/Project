@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProjectModelStoreContainer" CdmEntityContainer="ProjectEntities">
+    <EntitySetMapping Name="Cargoes">
+      <EntityTypeMapping TypeName="ProjectModel.Cargo">
+        <MappingFragment StoreEntitySet="Cargo">
+          <ScalarProperty Name="CargoID" ColumnName="CargoID" />
+          <ScalarProperty Name="CType" ColumnName="CType" />
+          <ScalarProperty Name="HazPer" ColumnName="HazPer" />
+          <ScalarProperty Name="WRate" ColumnName="WRate" />
+          <ScalarProperty Name="DRate" ColumnName="DRate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="ProjectModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CName" ColumnName="CName" />
+          <ScalarProperty Name="ConNum" ColumnName="ConNum" />
+          <ScalarProperty Name="Adrs" ColumnName="Adrs" />
+          <ScalarProperty Name="PostAdrs" ColumnName="PostAdrs" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Drivers">
+      <EntityTypeMapping TypeName="ProjectModel.Driver">
+        <MappingFragment StoreEntitySet="Driver">
+          <ScalarProperty Name="DriverNo" ColumnName="DriverNo" />
+          <ScalarProperty Name="DName" ColumnName="DName" />
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="Licen" ColumnName="Licen" />
+          <ScalarProperty Name="DOE" ColumnName="DOE" />
+          <ScalarProperty Name="Adrs" ColumnName="Adrs" />
+          <ScalarProperty Name="ConNum" ColumnName="ConNum" />
+          <ScalarProperty Name="nokCNum" ColumnName="nokCNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Garages">
+      <EntityTypeMapping TypeName="ProjectModel.Garage">
+        <MappingFragment StoreEntitySet="Garage">
+          <ScalarProperty Name="GarageID" ColumnName="GarageID" />
+          <ScalarProperty Name="Adrs" ColumnName="Adrs" />
+          <ScalarProperty Name="ConNum" ColumnName="ConNum" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="MCost" ColumnName="MCost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceHistories">
+      <EntityTypeMapping TypeName="ProjectModel.ServiceHistory">
+        <MappingFragment StoreEntitySet="ServiceHistory">
+          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+          <ScalarProperty Name="SDate" ColumnName="SDate" />
+          <ScalarProperty Name="Engine" ColumnName="Engine" />
+          <ScalarProperty Name="PF" ColumnName="PF" />
+          <ScalarProperty Name="Trans" ColumnName="Trans" />
+          <ScalarProperty Name="Chassis" ColumnName="Chassis" />
+          <ScalarProperty Name="cabin" ColumnName="cabin" />
+          <ScalarProperty Name="WT" ColumnName="WT" />
+          <ScalarProperty Name="Brakes" ColumnName="Brakes" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="TruckID" ColumnName="TruckID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trucks">
+      <EntityTypeMapping TypeName="ProjectModel.Truck">
+        <MappingFragment StoreEntitySet="Truck">
+          <ScalarProperty Name="TruckID" ColumnName="TruckID" />
+          <ScalarProperty Name="Vin" ColumnName="Vin" />
+          <ScalarProperty Name="LP" ColumnName="LP" />
+          <ScalarProperty Name="Tstat" ColumnName="Tstat" />
+          <ScalarProperty Name="Make" ColumnName="Make" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Chassis" ColumnName="Chassis" />
+          <ScalarProperty Name="Cabin" ColumnName="Cabin" />
+          <ScalarProperty Name="Engine" ColumnName="Engine" />
+          <ScalarProperty Name="Steering" ColumnName="Steering" />
+          <ScalarProperty Name="Powert" ColumnName="Powert" />
+          <ScalarProperty Name="Torque" ColumnName="Torque" />
+          <ScalarProperty Name="GearBox" ColumnName="GearBox" />
+          <ScalarProperty Name="TankCap" ColumnName="TankCap" />
+          <ScalarProperty Name="Milage" ColumnName="Milage" />
+          <ScalarProperty Name="Weightt" ColumnName="Weightt" />
+          <ScalarProperty Name="MaxLoad" ColumnName="MaxLoad" />
+          <ScalarProperty Name="PDate" ColumnName="PDate" />
+          <ScalarProperty Name="LSD" ColumnName="LSD" />
+          <ScalarProperty Name="GarageID" ColumnName="GarageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jobs">
+      <EntityTypeMapping TypeName="ProjectModel.Job">
+        <MappingFragment StoreEntitySet="Job">
+          <ScalarProperty Name="DriverNo" ColumnName="DriverNo" />
+          <ScalarProperty Name="CargoID" ColumnName="CargoID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="TruckID" ColumnName="TruckID" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="ActFuel" ColumnName="ActFuel" />
+          <ScalarProperty Name="ExpctFuel" ColumnName="ExpctFuel" />
+          <ScalarProperty Name="MAfter" ColumnName="MAfter" />
+          <ScalarProperty Name="MBefore" ColumnName="MBefore" />
+          <ScalarProperty Name="AbLoad" ColumnName="AbLoad" />
+          <ScalarProperty Name="CWeight" ColumnName="CWeight" />
+          <ScalarProperty Name="CWidth" ColumnName="CWidth" />
+          <ScalarProperty Name="CLength" ColumnName="CLength" />
+          <ScalarProperty Name="CHeight" ColumnName="CHeight" />
+          <ScalarProperty Name="ActArrive" ColumnName="ActArrive" />
+          <ScalarProperty Name="BasicCost" ColumnName="BasicCost" />
+          <ScalarProperty Name="Dist" ColumnName="Dist" />
+          <ScalarProperty Name="ETA" ColumnName="ETA" />
+          <ScalarProperty Name="ELoc" ColumnName="ELoc" />
+          <ScalarProperty Name="STime" ColumnName="STime" />
+          <ScalarProperty Name="SLoc" ColumnName="SLoc" />
+          <ScalarProperty Name="jState" ColumnName="jState" />
+          <ScalarProperty Name="JobID" ColumnName="JobID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

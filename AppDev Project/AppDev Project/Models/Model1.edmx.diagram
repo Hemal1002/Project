@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="23581f79193a4463b84e8c82424e4275" Name="Diagram1" ZoomLevel="72">
+        <EntityTypeShape EntityType="ProjectModel.Cargo" Width="1.5" PointX="7.875" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.Customer" Width="1.5" PointX="7.625" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.Driver" Width="1.5" PointX="5.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.Garage" Width="1.5" PointX="0.5" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.ServiceHistory" Width="1.5" PointX="3" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.Truck" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="ProjectModel.FK__Truck__GarageID__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectModel.FK__ServiceHi__Truck__46E78A0C" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ProjectModel.Job" Width="1.5" PointX="5.25" PointY="4.125" />
+        <AssociationConnector Association="ProjectModel.FK__Job__CargoID__4D94879B" />
+        <AssociationConnector Association="ProjectModel.FK__Job__CustomerID__4CA06362" />
+        <AssociationConnector Association="ProjectModel.FK__Job__DriverNo__4E88ABD4" />
+        <AssociationConnector Association="ProjectModel.FK__Job__TruckID__4BAC3F29" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
