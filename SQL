@@ -1,0 +1,113 @@
+Create database Project
+
+use Project
+
+create table Cargo
+(
+	CargoID varchar(5) Not Null Primary Key,
+	CType varchar(20) Not Null,
+	HazPer int Not Null,
+	WRate decimal(18,2) Not Null,
+	DRate decimal(18,2) Not Null
+);
+
+create table Driver
+(
+	DriverNo varchar(5) Not Null Primary Key,
+	DName varchar(20) Not Null,
+	DriverID varchar(15) Not Null,
+	Licen varchar(50) Not Null,
+	DOE datetime Not Null,
+	Adrs varchar(20) Not Null,
+	ConNum varchar(10) Not Null,
+	nokCNum varchar(10) Not Null,
+);
+
+
+create table Customer
+(
+	CustomerID varchar(5) Not Null Primary Key,
+	CName varchar(20) Not Null,
+	ConNum varchar(10) Not Null,
+	Adrs varchar(20) Not Null,
+	PostAdrs varchar(20) Not Null,
+	Email varchar(20) Not Null,
+);
+
+create table Garage
+(
+	GarageID varchar(5) Not Null Primary Key,
+	Adrs varchar(20) Not Null,
+	ConNum varchar(10) Not Null, 
+	Size varchar(2) Not Null,
+	MCost decimal(18,2) Not Null
+);
+
+
+create table Truck
+(
+	TruckID varchar(5) Not Null primary Key,
+	Vin varchar(14) Not Null,
+	LP varchar(10) Not Null,
+	Tstat varchar(10) Not Null,
+	Make varchar(20) Not Null,
+	Model varchar(20) Not Null,
+	Chassis varchar(20) Not Null,
+	Cabin varchar(20) Not Null,
+	Engine varchar(20) Not Null,
+	Steering varchar(20) Not Null,
+	Powert varchar(20) Not Null,
+	Torque varchar(20) Not Null,
+	GearBox varchar(20) Not Null,
+	TankCap varchar(20) Not Null,
+	Milage varchar(20) Not Null,
+	Weightt varchar(20) Not Null,
+	MaxLoad varchar(20) Not Null,
+	PDate date Not Null,
+	LSD datetime Not Null,
+	GarageID varchar(5) Not Null Foreign Key References Garage(GarageID)
+);
+
+Create table Job
+(
+	JobID Varchar(5) Not Null Primary Key,
+	jState varchar(15) Not Null, 
+	SLoc varchar(30) Not Null,
+	STime varchar(9) Not Null,
+	ELoc varchar(30) Not Null,
+	ETA varchar(5) Not Null,
+	Dist varchar(7) Not Null,
+	BasicCost decimal(18,2) Not Null,
+	ActArrive varchar(10),
+	CHeight varchar(10) Not Null,
+	CLength varchar(10) Not Null,
+	CWidth varchar(10) Not Null,
+	CWeight varchar(10) Not Null,
+	AbLoad Varchar(10) Not Null,
+	MBefore varchar(10) Not Null,
+	MAfter Varchar(10),
+	ExpctFuel varchar(10) Not Null,
+	ActFuel varchar(10),
+	Flag varchar(10) Not Null,
+	TruckID Varchar(5) Not Null foreign key references Truck(TruckID),
+	CustomerID Varchar(5) Not Null foreign key references Customer(CustomerID),
+	CargoID Varchar(5) Not Null foreign key references Cargo(CargoID),
+	DriverNo Varchar(5) Not Null foreign key references Driver(DriverNo),
+);
+
+
+
+Create table ServiceHistory
+(
+	ServiceID varchar(5) Not Null Primary Key,
+	SDate varchar(10),
+	Engine varchar(10),
+	PF varchar(10),
+	Trans varchar(10),
+	Chassis varchar(10),
+	cabin varchar(10),
+	WT varchar(10),
+	Brakes varchar(10),
+	Cost decimal(18,2) Not Null,
+	TruckID varchar(5) Not Null Foreign Key References Truck(TruckID)
+);
