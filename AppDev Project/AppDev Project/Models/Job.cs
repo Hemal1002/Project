@@ -37,6 +37,7 @@ namespace AppDev_Project.Models
         public string CustomerID { get; set; }
         public string CargoID { get; set; }
         public string DriverNo { get; set; }
+        public string CDisc { get; set; }
     
         public virtual Cargo Cargo { get; set; }
         public virtual Customer Customer { get; set; }
