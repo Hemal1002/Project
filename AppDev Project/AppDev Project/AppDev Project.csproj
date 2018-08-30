@@ -161,6 +161,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CargoesController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\Jobs1Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -228,6 +229,11 @@
     <Content Include="Views\Cargoes\Details.cshtml" />
     <Content Include="Views\Cargoes\Edit.cshtml" />
     <Content Include="Views\Cargoes\Index.cshtml" />
+    <Content Include="Views\Jobs1\Create.cshtml" />
+    <Content Include="Views\Jobs1\Delete.cshtml" />
+    <Content Include="Views\Jobs1\Details.cshtml" />
+    <Content Include="Views\Jobs1\Edit.cshtml" />
+    <Content Include="Views\Jobs1\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

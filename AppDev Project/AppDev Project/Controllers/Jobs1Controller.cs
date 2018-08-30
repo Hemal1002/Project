@@ -10,18 +10,18 @@ using AppDev_Project.Models;
 
 namespace AppDev_Project.Controllers
 {
-    public class JobsController : Controller
+    public class Jobs1Controller : Controller
     {
         private ProjectEntities db = new ProjectEntities();
 
-        // GET: Jobs
+        // GET: Jobs1
         public ActionResult Index()
         {
             var jobs = db.Jobs.Include(j => j.Cargo).Include(j => j.Customer).Include(j => j.Driver).Include(j => j.Truck);
             return View(jobs.ToList());
         }
 
-        // GET: Jobs/Details/5
+        // GET: Jobs1/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
@@ -36,7 +36,7 @@ namespace AppDev_Project.Controllers
             return View(job);
         }
 
-        // GET: Jobs/Create
+        // GET: Jobs1/Create
         public ActionResult Create()
         {
             ViewBag.CargoID = new SelectList(db.Cargoes, "CargoID", "CType");
@@ -46,7 +46,7 @@ namespace AppDev_Project.Controllers
             return View();
         }
 
-        // POST: Jobs/Create
+        // POST: Jobs1/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -67,7 +67,7 @@ namespace AppDev_Project.Controllers
             return View(job);
         }
 
-        // GET: Jobs/Edit/5
+        // GET: Jobs1/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -86,7 +86,7 @@ namespace AppDev_Project.Controllers
             return View(job);
         }
 
-        // POST: Jobs/Edit/5
+        // POST: Jobs1/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -106,7 +106,7 @@ namespace AppDev_Project.Controllers
             return View(job);
         }
 
-        // GET: Jobs/Delete/5
+        // GET: Jobs1/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
@@ -121,7 +121,7 @@ namespace AppDev_Project.Controllers
             return View(job);
         }
 
-        // POST: Jobs/Delete/5
+        // POST: Jobs1/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
