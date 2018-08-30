@@ -22,6 +22,7 @@ namespace AppDev_Project.Models
     
     public partial class Job 
     {
+        ProjectEntities db = new ProjectEntities();
         [Key]
         [Required]
         [DisplayName("Job ID")]
@@ -161,13 +162,14 @@ namespace AppDev_Project.Models
         {
             double c = 0.0;
 
-            var dr = from q in Cargo where q.CargoID == CargoID select q.DRate;
-            var wr = from q in Cargo where q.CargoID == CargoID select q.WRate;
-            var hz = from q in Cargo where q.CargoID == CargoID select q.HazPer;
+            var dr = (from q in db.Cargoes where q.CargoID == CargoID select q.DRate).Single();
+            var wr = (from q in db.Cargoes where q.CargoID == CargoID select q.WRate).Single();
+            var hz = (from q in db.Cargoes where q.CargoID == CargoID select q.HazPer).Single();
 
             double x = 0.0;
-
-             x = (CWeight * wr) + (Dist * dr);
+            double cw = Convert.ToDouble(CWeight);
+            int dist = Convert.ToInt32(Dist);
+             x = (cw*(Convert.ToDouble(wr)) + (dist*(Convert.ToDouble(dr))));
             c = c + (x * (hz / 100));
 
             if (checkAbLoad() == "Abnormal")
