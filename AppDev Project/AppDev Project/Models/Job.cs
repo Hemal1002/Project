@@ -117,7 +117,7 @@ namespace AppDev_Project.Models
         public string DriverNo { get; set; }
 
         [Required]
-        [DisplayName("Job ID")]
+        [DisplayName("Cargo Discription")]
         public string CDisc { get; set; }
 
 
