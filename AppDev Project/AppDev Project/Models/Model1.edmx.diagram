@@ -13,7 +13,7 @@
         <EntityTypeShape EntityType="ProjectModel.Truck" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
         <AssociationConnector Association="ProjectModel.FK__Truck__GarageID__3F466844" ManuallyRouted="false" />
         <AssociationConnector Association="ProjectModel.FK__ServiceHi__Truck__46E78A0C" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="ProjectModel.Job" Width="1.5" PointX="5.25" PointY="4.125" />
+        <EntityTypeShape EntityType="ProjectModel.Job" Width="1.5" PointX="5.25" PointY="3.75" />
         <AssociationConnector Association="ProjectModel.FK__Job__CargoID__4D94879B" />
         <AssociationConnector Association="ProjectModel.FK__Job__CustomerID__4CA06362" />
         <AssociationConnector Association="ProjectModel.FK__Job__DriverNo__4E88ABD4" />
