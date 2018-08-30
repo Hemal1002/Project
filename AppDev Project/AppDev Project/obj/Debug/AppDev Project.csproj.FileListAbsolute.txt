@@ -97,3 +97,5 @@ C:\Users\masudh\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\Sy
 C:\Users\masudh\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\obj\Debug\AppDev Project.csprojResolveAssemblyReference.cache
 C:\Users\masudh\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\obj\Debug\AppDev Project.dll
 C:\Users\masudh\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\obj\Debug\AppDev Project.pdb
+C:\Users\masudh\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\EntityFramework.SqlServer.dll
+C:\Users\masudh\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\EntityFramework.SqlServer.xml

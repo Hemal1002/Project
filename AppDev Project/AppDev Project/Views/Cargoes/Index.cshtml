@@ -4,13 +4,23 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
+<h2>Cargo Table</h2>
+@using (Html.BeginForm("Index", "Cargoes", FormMethod.Get))
+{
+    
+ <b>Search by : </b> @Html.RadioButton("option","CargoID")  <text> Cargo ID</text>
+ @Html.RadioButton("option","CType") <text>Cargo Type</text>  @Html.RadioButton("option","Rate") <text>Cargo Rate</text>
+    @Html.RadioButton("option", "WeightR") <text>Weight rate</text> @Html.RadioButton("option","DR") <text>Distance Rate</text>
+  @Html.TextBox("Search"); <input type="submit" value="Search"/>
+    }
 <p>
-    @Html.ActionLink("Create New", "Create")
+   @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CargoID)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.CType)
         </th>
@@ -26,8 +36,19 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+  @if (Model.Count() == 0)
+  { <tr> <td colspan = "3" > Records not found </td>
+    </tr >
+  }
+  else
+  {
+
+      foreach (var item in Model)
+      {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CargoID)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.CType)
         </td>
@@ -41,11 +62,12 @@
             @Html.DisplayFor(modelItem => item.DRate)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CargoID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CargoID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CargoID })
+            @Html.ActionLink("Edit", "Edit", new { id = item.CargoID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.CargoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.CargoID })
         </td>
     </tr>
-}
+      }
+  }
 
 </table>
