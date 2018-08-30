@@ -11,6 +11,8 @@ namespace AppDev_Project.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel;
     
     public partial class Cargo
     {
@@ -19,10 +21,20 @@ namespace AppDev_Project.Models
             this.Jobs = new HashSet<Job>();
         }
     
+        [Required]
+        [DisplayName("Cargo ID")]
         public string CargoID { get; set; }
+        [Required]
+        [DisplayName("Cargo Type")]
         public string CType { get; set; }
+        [Required]
+        [DisplayName("Rate")]
         public int HazPer { get; set; }
+        [Required]
+        [DisplayName("Weight Rate")]
         public decimal WRate { get; set; }
+        [Required]
+        [DisplayName("Distance Rate")]
         public decimal DRate { get; set; }
     
         public virtual ICollection<Job> Jobs { get; set; }
