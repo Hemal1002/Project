@@ -5,7 +5,15 @@
 }
 
 <h2>Index</h2>
+@using (Html.BeginForm("Index", "Trucks", FormMethod.Get))
+{
 
+    <b>Search by : </b> @Html.RadioButton("option", "TruckID")  <text> Truck ID</text>
+    @Html.RadioButton("option", "vn") <text>VIN Number</text>  @Html.RadioButton("option", "lp") <text>License Plate</text>
+    @Html.RadioButton("option", "ts") <text>Truck status</text> @Html.RadioButton("option", "make") <text>Make</text>
+    @Html.RadioButton("option", "ch") <text>Chassis</text>
+    @Html.TextBox("Search"); <input type="submit" value="Search" />
+}
 <p>
     @Html.ActionLink("Customer", "Index", "Customers")
     @Html.ActionLink("Job", "Index", "Jobs1")
@@ -75,7 +83,16 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+    @if (Model.Count() == 0)
+    {
+    <tr>
+        <td colspan="3"> Records not found </td>
+    </tr>
+    }
+    else
+    {
+        foreach (var item in Model)
+        {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Vin)
@@ -135,11 +152,12 @@
             @Html.DisplayFor(modelItem => item.Garage.Adrs)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.TruckID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.TruckID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.TruckID })
+            @Html.ActionLink("Edit", "Edit", new { id = item.TruckID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.TruckID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.TruckID })
         </td>
     </tr>
-}
+        }
+    }
 
 </table>

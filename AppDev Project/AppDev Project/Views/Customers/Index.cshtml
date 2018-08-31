@@ -4,8 +4,17 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>
+    Customer table
+</h2>
+@using (Html.BeginForm("Index", "Customers", FormMethod.Get))
+{
 
+    <b>Search by : </b> @Html.RadioButton("option", "CustID")  <text> Customer ID</text>
+    @Html.RadioButton("option", "CName") <text>Customer Name</text>  @Html.RadioButton("option", "CNum") <text>Contact Number</text>
+    @Html.RadioButton("option", "em") <text>Email</text> 
+    @Html.TextBox("Search"); <input type="submit" value="Search" />
+}
 <p>
     @Html.ActionLink("Cargo", "Index", "Cargoes")<br />
     @Html.ActionLink("Job", "Index", "Jobs1") <br />
@@ -32,7 +41,19 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+    @if (Model.Count() == 0)
+    {
+        <tr>
+            <td colspan="3"> Records not found </td>
+        </tr>
+    }
+    else
+    {
+
+
+
+        foreach (var item in Model)
+        {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.CName)
@@ -50,11 +71,12 @@
             @Html.DisplayFor(modelItem => item.Email)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CustomerID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CustomerID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CustomerID })
+            @Html.ActionLink("Edit", "Edit", new { id = item.CustomerID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.CustomerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.CustomerID })
         </td>
     </tr>
-}
+        }
+    }
 
 </table>
