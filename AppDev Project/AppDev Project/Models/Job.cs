@@ -11,36 +11,222 @@ namespace AppDev_Project.Models
 {
     using System;
     using System.Collections.Generic;
+    using AppDev_Project.Models;
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
+    using System.Data.Entity;
     
-    public partial class Job
+    
+    
+    public partial class Job 
     {
+        ProjectEntities db = new ProjectEntities();
+        [Key]
+        [Required]
+        [DisplayName("Job ID")]
         public string JobID { get; set; }
+
+        [Required]
+        [DisplayName("Job Status")]
         public string jState { get; set; }
+
+        [Required]
+        [DisplayName("Start Location")]
         public string SLoc { get; set; }
+
+        [Required]
+        [DisplayName("Start Time")]
         public string STime { get; set; }
+
+        [Required]
+        [DisplayName("End Location")]
         public string ELoc { get; set; }
+
+        [Required]
+        [DisplayName("Estimated Travel Time")]
         public string ETA { get; set; }
+
+        [Required]
+        [DisplayName("Trip Distance")]
         public string Dist { get; set; }
+
+        [Required]
+        [DisplayName("Basic Cost")]
         public decimal BasicCost { get; set; }
+
+      
+        [DisplayName("Actual Arrival Time")]
         public string ActArrive { get; set; }
+
+        [Required]
+        [DisplayName("Cargo Height")]
         public string CHeight { get; set; }
+
+        [Required]
+        [DisplayName("Cargo Length")]
         public string CLength { get; set; }
+
+        [Required]
+        [DisplayName("Cargo Width")]
         public string CWidth { get; set; }
+
+        [Required]
+        [DisplayName("Cargo Weight")]
         public string CWeight { get; set; }
+
+        [Required]
+        [DisplayName("Abnormal Load")]
         public string AbLoad { get; set; }
+
+        [Required]
+        [DisplayName("Milage Before")]
         public string MBefore { get; set; }
+
+        
+        [DisplayName("Milage After")]
         public string MAfter { get; set; }
+
+        [Required]
+        [DisplayName("Expected Fuel Burn")]
         public string ExpctFuel { get; set; }
+
+        
+        [DisplayName("Actual Fuel Burned")]
         public string ActFuel { get; set; }
+
+        [Required]
+        [DisplayName("Alert")]
         public string Flag { get; set; }
+
+        [Required]
+        [DisplayName("Truck ID")]
         public string TruckID { get; set; }
+
+        [Required]
+        [DisplayName("Customer ID")]
         public string CustomerID { get; set; }
+
+        [Required]
+        [DisplayName("Cargo ID")]
         public string CargoID { get; set; }
+
+        [Required]
+        [DisplayName("Driver No")]
         public string DriverNo { get; set; }
+
+        [Required]
+        [DisplayName("Cargo Discription")]
+        public string CDisc { get; set; }
+
+
     
         public virtual Cargo Cargo { get; set; }
         public virtual Customer Customer { get; set; }
         public virtual Driver Driver { get; set; }
         public virtual Truck Truck { get; set; }
+
+        
+
+        public string checkAbLoad()
+        {
+            string a = "Normal";
+        
+            if(double.Parse(CWeight) > 23000 || double.Parse(CWidth) > 260 || double.Parse(CLength) > 1850 || double.Parse(CHeight) > 430)
+            {
+                a = "Abnormal";
+            }
+
+            return a;
+        }
+
+        public int calcETA()
+        {
+            int a = 0;
+
+            if(checkAbLoad() == "Abnormal")
+            {
+                a = int.Parse(Dist) / 40;
+            }
+            else
+            {
+                a = int.Parse(Dist) / 80;
+            }
+            
+
+            return a;
+        }
+
+        public double calcBCost()
+        {
+            double c = 0.0;
+
+            var dr = (from q in db.Cargoes where q.CargoID == CargoID select q.DRate).Single();
+            var wr = (from q in db.Cargoes where q.CargoID == CargoID select q.WRate).Single();
+            var hz = (from q in db.Cargoes where q.CargoID == CargoID select q.HazPer).Single();
+
+            double x = 0.0;
+            double cw = Convert.ToDouble(CWeight);
+            int dist = Convert.ToInt32(Dist);
+             x = (cw*(Convert.ToDouble(wr)) + (dist*(Convert.ToDouble(dr))));
+            c = c + (x * (hz / 100));
+
+            if (checkAbLoad() == "Abnormal")
+            {
+                c = c + (x * 0.35);
+
+            }
+
+            return c;
+        }
+
+        public double calcMile()
+        {
+            double m = 0.0;
+
+            if (MAfter != null)
+            {
+                
+                m = double.Parse(MAfter) - double.Parse(MBefore);
+
+            }
+
+            return m;
+        }
+
+        public bool checkFuel()
+        {
+            bool f = false;
+
+            if (ActFuel != null)
+            {
+                double ex = double.Parse(ExpctFuel) * 0.15;
+
+                if (double.Parse(ActFuel) > (double.Parse(ExpctFuel) +ex))
+                {
+                    f = true;
+                }
+            }
+
+            return f;
+        }
+
+        public string checkFlag()
+        {
+            string flag = "False";
+
+            if(jState == "Complete")
+            {
+                if (calcMile() > (double.Parse(Dist) + (double.Parse(Dist) * 0.15)) || checkFuel() == true)
+                {
+                    flag = "TRUE";
+                }
+
+            }
+
+            return flag;
+        }
+
     }
 }

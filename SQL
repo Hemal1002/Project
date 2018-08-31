@@ -111,3 +111,12 @@ Create table ServiceHistory
 	Cost decimal(18,2) Not Null,
 	TruckID varchar(5) Not Null Foreign Key References Truck(TruckID)
 );
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+29/08/18 Added CDisc to jobs table
+
+use project
+
+Alter table Job
+	ADD CDisc varchar(60) Not Null;

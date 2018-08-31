@@ -95,6 +95,7 @@
     <EntitySetMapping Name="Jobs">
       <EntityTypeMapping TypeName="ProjectModel.Job">
         <MappingFragment StoreEntitySet="Job">
+          <ScalarProperty Name="CDisc" ColumnName="CDisc" />
           <ScalarProperty Name="DriverNo" ColumnName="DriverNo" />
           <ScalarProperty Name="CargoID" ColumnName="CargoID" />
           <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />

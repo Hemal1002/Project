@@ -11,6 +11,8 @@ namespace AppDev_Project.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel;
     
     public partial class Customer
     {
@@ -18,12 +20,23 @@ namespace AppDev_Project.Models
         {
             this.Jobs = new HashSet<Job>();
         }
-    
+
+        [Required]
+        [DisplayName("Customer ID")]
         public string CustomerID { get; set; }
+        [Required]
+        [DisplayName("Custmoer Name")]
         public string CName { get; set; }
+        [Required]
+        [DisplayName("Contact Number")]
         public string ConNum { get; set; }
+        [Required]
+        [DisplayName("Address")]
         public string Adrs { get; set; }
+        [Required]
+        [DisplayName("Postal Address")]
         public string PostAdrs { get; set; }
+        [Required]
         public string Email { get; set; }
     
         public virtual ICollection<Job> Jobs { get; set; }

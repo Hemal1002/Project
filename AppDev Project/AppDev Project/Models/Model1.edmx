@@ -76,6 +76,7 @@
           <Property Name="CustomerID" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="CargoID" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="DriverNo" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="CDisc" Type="varchar" MaxLength="60" Nullable="false" />
         </EntityType>
         <EntityType Name="ServiceHistory">
           <Key>
@@ -376,7 +377,7 @@
             <End Role="Truck" EntitySet="Trucks" />
             <End Role="Job" EntitySet="Jobs" />
           </AssociationSet>
-        </EntityContainer>
+          </EntityContainer>
         <EntityType Name="Job">
           <Key>
             <PropertyRef Name="JobID" />
@@ -404,6 +405,7 @@
           <Property Name="CustomerID" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
           <Property Name="CargoID" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
           <Property Name="DriverNo" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="CDisc" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Cargo" Relationship="ProjectModel.FK__Job__CargoID__4D94879B" FromRole="Job" ToRole="Cargo" />
           <NavigationProperty Name="Customer" Relationship="ProjectModel.FK__Job__CustomerID__4CA06362" FromRole="Job" ToRole="Customer" />
           <NavigationProperty Name="Driver" Relationship="ProjectModel.FK__Job__DriverNo__4E88ABD4" FromRole="Job" ToRole="Driver" />
@@ -457,7 +459,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -557,6 +559,7 @@
           <EntitySetMapping Name="Jobs">
             <EntityTypeMapping TypeName="ProjectModel.Job">
               <MappingFragment StoreEntitySet="Job">
+                <ScalarProperty Name="CDisc" ColumnName="CDisc" />
                 <ScalarProperty Name="DriverNo" ColumnName="DriverNo" />
                 <ScalarProperty Name="CargoID" ColumnName="CargoID" />
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />

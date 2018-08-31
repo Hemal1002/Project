@@ -11,7 +11,9 @@ namespace AppDev_Project.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel;
+
     public partial class Truck
     {
         public Truck()
@@ -19,28 +21,64 @@ namespace AppDev_Project.Models
             this.ServiceHistories = new HashSet<ServiceHistory>();
             this.Jobs = new HashSet<Job>();
         }
-    
+
+        [Required]
+        [DisplayName("Truck ID")]
         public string TruckID { get; set; }
+        [Required]
+        [DisplayName("VIN Number")]
+        [MinLength(17, ErrorMessage = "A VIN number has to have 17 characters")]
+        [MaxLength(17, ErrorMessage = "A VIN number has to have 17 characters")]
         public string Vin { get; set; }
+        [Required]
+        [DisplayName("License Plate")]
+        [MinLength(10, ErrorMessage = "A license plate has to have 10 characters")]
+        [MaxLength(10, ErrorMessage = "A license plate has to have 10 characters")]
         public string LP { get; set; }
+        [Required]
+        [DisplayName("Truck status")]
         public string Tstat { get; set; }
+        [Required]
         public string Make { get; set; }
+        [Required]
         public string Model { get; set; }
+        [Required]
         public string Chassis { get; set; }
+        [Required]
         public string Cabin { get; set; }
+        [Required]
         public string Engine { get; set; }
+        [Required]
         public string Steering { get; set; }
+        [Required]
+        [DisplayName("Power")]
         public string Powert { get; set; }
+        [Required]
         public string Torque { get; set; }
+        [Required]
+        [DisplayName("Gear Box")]
         public string GearBox { get; set; }
+        [Required]
+        [DisplayName("Tank Cap")]
         public string TankCap { get; set; }
+        [Required]
         public string Milage { get; set; }
+        [Required]
+        [DisplayName("Weight")]
         public string Weightt { get; set; }
+        [Required]
+        [DisplayName("Max Load")]
         public string MaxLoad { get; set; }
+        [Required]
+        [DisplayName("Purchase Date")]
         public System.DateTime PDate { get; set; }
+        [Required]
+        [DisplayName("Last Service Date")]
         public System.DateTime LSD { get; set; }
+        [Required]
+        [DisplayName("Garage ID")]
         public string GarageID { get; set; }
-    
+
         public virtual Garage Garage { get; set; }
         public virtual ICollection<ServiceHistory> ServiceHistories { get; set; }
         public virtual ICollection<Job> Jobs { get; set; }

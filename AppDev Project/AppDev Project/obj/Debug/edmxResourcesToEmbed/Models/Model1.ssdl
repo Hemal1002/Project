@@ -71,6 +71,7 @@
     <Property Name="CustomerID" Type="varchar" MaxLength="5" Nullable="false" />
     <Property Name="CargoID" Type="varchar" MaxLength="5" Nullable="false" />
     <Property Name="DriverNo" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="CDisc" Type="varchar" MaxLength="60" Nullable="false" />
   </EntityType>
   <EntityType Name="ServiceHistory">
     <Key>
