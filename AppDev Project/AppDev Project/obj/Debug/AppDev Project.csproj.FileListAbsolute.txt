@@ -99,3 +99,5 @@ C:\Users\masudh\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\obj\De
 C:\Users\masudh\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\obj\Debug\AppDev Project.pdb
 C:\Users\masudh\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\EntityFramework.SqlServer.dll
 C:\Users\masudh\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\EntityFramework.SqlServer.xml
+C:\Users\hemal\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\EntityFramework.SqlServer.dll
+C:\Users\hemal\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\EntityFramework.SqlServer.xml
