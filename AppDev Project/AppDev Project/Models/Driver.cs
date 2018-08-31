@@ -11,6 +11,8 @@ namespace AppDev_Project.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel;
     
     public partial class Driver
     {
@@ -19,13 +21,23 @@ namespace AppDev_Project.Models
             this.Jobs = new HashSet<Job>();
         }
     
+        [Required]
+        [DisplayName("Driver Number")]
         public string DriverNo { get; set; }
+        [Required]
+        [DisplayName("Driver Name")]
         public string DName { get; set; }
+        [DisplayName("Driver ID Number")]
         public string DriverID { get; set; }
+        [DisplayName("Driver Liscence Code")]
         public string Licen { get; set; }
+        [DisplayName("Date of Employment")]
         public System.DateTime DOE { get; set; }
+        [DisplayName("Adddress")]
         public string Adrs { get; set; }
+        [DisplayName("Contact Number")]
         public string ConNum { get; set; }
+
         public string nokCNum { get; set; }
     
         public virtual ICollection<Job> Jobs { get; set; }
