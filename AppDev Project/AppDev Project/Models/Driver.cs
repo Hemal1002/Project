@@ -37,7 +37,7 @@ namespace AppDev_Project.Models
         public string Adrs { get; set; }
         [DisplayName("Contact Number")]
         public string ConNum { get; set; }
-
+        [DisplayName("Next of Kin Contact Number")]
         public string nokCNum { get; set; }
     
         public virtual ICollection<Job> Jobs { get; set; }
