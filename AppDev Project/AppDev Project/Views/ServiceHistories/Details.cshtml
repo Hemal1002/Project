@@ -1,0 +1,98 @@
+﻿@model AppDev_Project.Models.ServiceHistory
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ServiceHistory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Engine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Engine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Trans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chassis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chassis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cabin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cabin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Brakes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brakes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Truck.Vin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Truck.Vin)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ServiceID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
