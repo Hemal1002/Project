@@ -6,6 +6,17 @@
 
 <h2>Index</h2>
 
+@using (Html.BeginForm("Index", "Jobs1", FormMethod.Get))
+{
+
+    <b>Search by : </b> @Html.RadioButton("option", "JobID")  <text> Job ID</text>
+    
+    @Html.RadioButton("option", "js") <text>Job status</text> 
+    @Html.RadioButton("option", "jd") <text>Job Driver</text>
+    @Html.TextBox("Search"); <input type="submit" value="Search" />
+}
+
+
 <p>
     @Html.ActionLink("Customer", "Index", "Customers")
     @Html.ActionLink("Cargo", "Index", "Cargoes")
@@ -38,7 +49,7 @@
         <th>
             @Html.DisplayNameFor(model => model.ActArrive)
         </th>
-        <th>
+  <!--  <th>
             @Html.DisplayNameFor(model => model.CHeight)
         </th>
         <th>
@@ -50,9 +61,11 @@
         <th>
             @Html.DisplayNameFor(model => model.CWeight)
         </th>
+  -->
         <th>
             @Html.DisplayNameFor(model => model.AbLoad)
         </th>
+    <!--
         <th>
             @Html.DisplayNameFor(model => model.MBefore)
         </th>
@@ -65,6 +78,7 @@
         <th>
             @Html.DisplayNameFor(model => model.ActFuel)
         </th>
+    -->
         <th>
             @Html.DisplayNameFor(model => model.Flag)
         </th>
@@ -88,6 +102,7 @@
 
 @foreach (var item in Model) {
     <tr>
+        
         <td>
             @Html.DisplayFor(modelItem => item.jState)
         </td>
@@ -112,6 +127,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.ActArrive)
         </td>
+    <!--
         <td>
             @Html.DisplayFor(modelItem => item.CHeight)
         </td>
@@ -124,9 +140,11 @@
         <td>
             @Html.DisplayFor(modelItem => item.CWeight)
         </td>
+    -->
         <td>
             @Html.DisplayFor(modelItem => item.AbLoad)
         </td>
+    <!--
         <td>
             @Html.DisplayFor(modelItem => item.MBefore)
         </td>
@@ -139,6 +157,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.ActFuel)
         </td>
+    -->
         <td>
             @Html.DisplayFor(modelItem => item.Flag)
         </td>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿//asdasd
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -15,9 +17,29 @@ namespace AppDev_Project.Controllers
         private ProjectEntities db = new ProjectEntities();
 
         // GET: Trucks
-        public ActionResult Index()
+        public ActionResult Index(string search , string option)
         {
             var trucks = db.Trucks.Include(t => t.Garage);
+            if (option == "vn")
+            {
+                return View(db.Trucks.Where(x => x.Vin  == search || search == null).ToList());
+            }
+            else if (option == "lp")
+            {
+                return View(db.Trucks.Where(x => x.LP == search || search == null).ToList());
+            }
+            else if (option == "ts")
+            {
+                return View(db.Trucks.Where(x => x.Tstat == search || search == null).ToList());
+            }
+            else if (option =="ch")
+            {
+                return View(db.Trucks.Where(x => x.Chassis == search || search == null).ToList());
+            }
+            else
+            {
+                return View(db.Trucks.Where(x => x.TruckID == search || search == null).ToList());
+            }
             return View(trucks.ToList());
         }
 

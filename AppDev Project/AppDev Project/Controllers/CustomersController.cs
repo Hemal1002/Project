@@ -1,4 +1,7 @@
-﻿using System;
+﻿//dasdad
+
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -15,9 +18,24 @@ namespace AppDev_Project.Controllers
         private ProjectEntities db = new ProjectEntities();
 
         // GET: Customers
-        public ActionResult Index()
+        public ActionResult Index(string option , string search)
         {
-            return View(db.Customers.ToList());
+            if (option == "CName")
+            {
+                return View(db.Customers.Where(x => x.CName == search || search == null).ToList());
+            }
+            else if (option == "CNum")
+            {
+                return View(db.Customers.Where(x => x.ConNum == search || search == null).ToList());
+            }
+            else if (option=="em")
+            {
+                return View(db.Customers.Where(x => x.Email == search || search == null).ToList());
+            }
+            else
+            {
+                return View(db.Customers.Where(x => x.CustomerID == search || search == null).ToList());
+            }
         }
 
         // GET: Customers/Details/5
