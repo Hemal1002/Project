@@ -55,6 +55,10 @@ namespace AppDev_Project.Controllers
         {
             if (ModelState.IsValid)
             {
+                job.BasicCost = job.calcBCost();
+                job.ETA = job.calcETA()+"";
+                job.AbLoad = job.checkAbLoad();
+                job.Flag = job.checkFlag();
                 db.Jobs.Add(job);
                 db.SaveChanges();
                 return RedirectToAction("Index");
