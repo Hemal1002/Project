@@ -243,6 +243,7 @@
     <Content Include="Views\Trucks\Details.cshtml" />
     <Content Include="Views\Trucks\Edit.cshtml" />
     <Content Include="Views\Trucks\Index.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
