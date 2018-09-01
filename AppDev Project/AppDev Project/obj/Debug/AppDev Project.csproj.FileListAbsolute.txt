@@ -99,3 +99,53 @@ C:\Users\masudh\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\obj\De
 C:\Users\masudh\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\obj\Debug\AppDev Project.pdb
 C:\Users\masudh\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\EntityFramework.SqlServer.dll
 C:\Users\masudh\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\EntityFramework.SqlServer.xml
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\ApplicationInsights.config
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\roslyn\csc.exe
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\roslyn\vbc.exe
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\roslyn\VBCSCompiler.exe
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\AppDev Project.dll.config
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\AppDev Project.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\AppDev Project.pdb
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\EntityFramework.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\EntityFramework.SqlServer.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\Microsoft.AI.Web.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\System.Web.Helpers.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\System.Web.Mvc.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\System.Web.Razor.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\System.Web.Webpages.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\System.Web.Webpages.Razor.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\EntityFramework.xml
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\EntityFramework.SqlServer.xml
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\Microsoft.AI.Web.xml
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\System.Web.Razor.xml
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\System.Web.Webpages.xml
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\System.Web.Webpages.Razor.xml
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\System.Web.Helpers.xml
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\bin\System.Web.Mvc.xml
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\obj\Debug\AppDev Project.csprojResolveAssemblyReference.cache
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\obj\Debug\AppDev Project.dll
+C:\Users\Lee\Source\Repos\ProjectForReal\AppDev Project\AppDev Project\obj\Debug\AppDev Project.pdb
