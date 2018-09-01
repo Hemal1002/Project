@@ -15,9 +15,31 @@ namespace AppDev_Project.Controllers
         private ProjectEntities db = new ProjectEntities();
 
         // GET: Jobs1
-        public ActionResult Index()
+        public ActionResult Index(string search, string option)
         {
             var jobs = db.Jobs.Include(j => j.Cargo).Include(j => j.Customer).Include(j => j.Driver).Include(j => j.Truck);
+
+            if (option == "js")
+            {
+                return View(db.Jobs.Where(x => x.jState == search || search == null).ToList());
+            }
+            else
+            {
+                if (option == "jd")
+                {
+                    return View(db.Jobs.Where(x => x.DriverNo == search || search == null).ToList());
+                }
+                else
+                {
+                    if(option == "JobID")
+                    {
+                        return View(db.Jobs.Where(x => x.JobID == search || search == null).ToList());
+                    }
+                }
+                
+            } 
+            
+
             return View(jobs.ToList());
         }
 
@@ -42,7 +64,7 @@ namespace AppDev_Project.Controllers
             ViewBag.CargoID = new SelectList(db.Cargoes, "CargoID", "CType");
             ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "CName");
             ViewBag.DriverNo = new SelectList(db.Drivers, "DriverNo", "DName");
-            ViewBag.TruckID = new SelectList(db.Trucks, "TruckID", "Vin");
+            ViewBag.TruckID = new SelectList(db.Trucks.Where(t => t.Tstat != "Busy"), "TruckID", "Vin");
             return View();
         }
 
