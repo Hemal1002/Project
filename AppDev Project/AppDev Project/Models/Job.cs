@@ -158,7 +158,7 @@ namespace AppDev_Project.Models
             return a;
         }
 
-        public double calcBCost()
+        public decimal calcBCost()
         {
             double c = 0.0;
 
@@ -178,7 +178,7 @@ namespace AppDev_Project.Models
 
             }
 
-            return c;
+            return decimal.Parse(c+"");
         }
 
         public double calcMile()
