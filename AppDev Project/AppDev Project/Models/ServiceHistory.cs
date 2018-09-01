@@ -11,19 +11,29 @@ namespace AppDev_Project.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel;
     
     public partial class ServiceHistory
     {
+        [Required]
+        [DisplayName("Service ID")]
         public string ServiceID { get; set; }
+        [Required]
+        [DisplayName("Service Date")]
         public string SDate { get; set; }
         public string Engine { get; set; }
         public string PF { get; set; }
+        [DisplayName("Transmission")]
         public string Trans { get; set; }
         public string Chassis { get; set; }
         public string cabin { get; set; }
+        [DisplayName("Wheels and Tyres")]
         public string WT { get; set; }
         public string Brakes { get; set; }
         public decimal Cost { get; set; }
+        [Required]
+        [DisplayName("Truck ID")]
         public string TruckID { get; set; }
     
         public virtual Truck Truck { get; set; }
